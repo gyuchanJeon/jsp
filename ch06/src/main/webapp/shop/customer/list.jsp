@@ -59,7 +59,7 @@
 <body>
 	<h3>고객목록</h3>
 	
-	<a href="/ch06/1.DBCPTest.jsp">처음으로</a>
+	<a href="/ch06/2.DBCPTest.jsp">처음으로</a>
 	<a href="/ch06/shop/customer/register.jsp">등록</a>
 	
 	<table border="1">
