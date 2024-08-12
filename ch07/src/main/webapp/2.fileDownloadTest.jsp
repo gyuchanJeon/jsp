@@ -75,12 +75,10 @@
 			<td><%= vo.getRdate().substring(0, 10) %></td>
 			<td>
 				<a href="./proc/fileDelete.jsp?no=<%= vo.getNo() %>">삭제</a>
-				<a href="./proc/fileDownload.jsp?no=<%= vo.getNo()%>">다운로드</a>
+				<a href="./proc/fileDownload.jsp?no=<%= vo.getNo() %>">다운로드</a>
 			</td>			
 		</tr>
 		<% } %>
 	</table>
-	
-	
 </body>
 </html>

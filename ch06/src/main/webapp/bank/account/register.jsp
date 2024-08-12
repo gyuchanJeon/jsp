@@ -18,7 +18,7 @@
 	<a href="/ch06/2.DBCPTest.jsp">처음으로</a>
 	<a href="/ch06/bank/list.jsp">목록</a>
 	
-	<form action="">
+	<form action="ch06/account/registerProc.jsp">
 	<table border="1">
 		<tr>
 			<td>식별번호</td>

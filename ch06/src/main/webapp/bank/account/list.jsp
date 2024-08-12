@@ -58,7 +58,7 @@ try{
 <body>
 	
 	<a href="/ch06/2.DBCPTest.jsp">처음으로</a>
-	<a href="/ch06/account/register.jsp">등록</a>
+	<a href="./register.jsp">등록</a>
 	
 	<table border="1">
 		<tr>
