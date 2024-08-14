@@ -1,4 +1,4 @@
-3<%@page import="sub1.User1VO"%>
+<%@page import="sub1.User4VO"%>
 <%@page import="com.google.gson.Gson"%>
 <%@page import="java.io.BufferedReader"%>
 <%@page import="com.google.gson.JsonObject"%>
@@ -24,8 +24,8 @@ reader.close();
 
 // JSON 파싱
 Gson gson = new Gson();
-User1VO user1 = gson.fromJson(requestBody.toString(), User1VO.class);
-System.out.println(user1);
+User4VO user4 = gson.fromJson(requestBody.toString(), User4VO.class);
+System.out.println(user4);
 
 int rowCount = 0;
 
@@ -38,12 +38,14 @@ try {
 	Connection conn = ds.getConnection();
 
 	// 2단계 - SQL 실행 객체 생성
-	String sql = "insert into `user1` values (?,?,?,?)";
+	String sql = "insert into `user4` values (?,?,?,?,?,?)";
 	PreparedStatement psmt = conn.prepareStatement(sql);
-	psmt.setString(1, user1.getUid());
-	psmt.setString(2, user1.getName());
-	psmt.setString(3, user1.getHp());
-	psmt.setInt(4, user1.getAge());
+	psmt.setString(1, user4.getUid());
+	psmt.setString(2, user4.getName());
+	psmt.setString(3, user4.getGender());
+	psmt.setInt(4, user4.getAge());
+	psmt.setString(5, user4.getHp());
+	psmt.setString(6, user4.getAddr());
 
 	// 3단계 - SQL 실행
 	rowCount = psmt.executeUpdate();

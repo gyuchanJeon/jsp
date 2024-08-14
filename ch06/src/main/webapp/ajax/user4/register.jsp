@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ajax::user1</title>
+<title>ajax::user4</title>
 <script>
 	
 	
@@ -14,19 +14,22 @@
 			
 			
 			btnSubmit.onclick = (e) => {
-				e.preventDefault();				
 				
 				const uid = formUser.uid.value;
 				const name = formUser.name.value;
-				const hp = formUser.hp.value;
+				const gender = formUser.gender.value;
 				const age = formUser.age.value;
+				const hp = formUser.hp.value;
+				const addr = formUser.addr.value;
 								
 				// json 생성
 				const jsonData = {
 					"uid": uid,
 					"name": name,
+					"gender": gender,
+					"age": age,
 					"hp": hp,
-					"age": age
+					"addr": addr
 				};
 				
 				console.log(jsonData);
@@ -61,7 +64,7 @@
 	</script>
 </head>
 <body>
-	<h3>user1 등록</h3>
+	<h3>user4 등록</h3>
 
 	<a href="./list.jsp">목록이동</a>
 	<form action="#" method="post">
@@ -75,12 +78,20 @@
 				<td><input type="text" name="name" /></td>
 			</tr>
 			<tr>
-				<td>휴대폰</td>
-				<td><input type="text" name="hp" /></td>
+				<td>성별</td>
+				<td><input type="text" name="gender" /></td>
 			</tr>
 			<tr>
 				<td>나이</td>
 				<td><input type="number" name="age" /></td>
+			</tr>
+			<tr>
+				<td>휴대폰</td>
+				<td><input type="text" name="hp" /></td>
+			</tr>
+			<tr>
+				<td>주소</td>
+				<td><input type="text" name="addr" /></td>
 			</tr>
 			<tr>
 				<td colspan="2" align="right"><input type="submit"

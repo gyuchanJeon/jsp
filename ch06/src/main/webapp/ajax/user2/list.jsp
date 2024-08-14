@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ajax::user1</title>
+<title>ajax::user2</title>
 <script>
 	
 		window.onload = function(){
@@ -22,8 +22,8 @@
 						const row = `<tr>
 			                            <td>\${user.uid}</td>
 			                            <td>\${user.name}</td>
-			                            <td>\${user.hp}</td>
-			                            <td>\${user.age}</td>
+			                            <td>\${user.birth}</td>
+			                            <td>\${user.addr}</td>
 			                            <td>
 			                            	<a href='#' class='modify'>수정</a>
 			                            	<a href='#' class='delete'>삭제</a>
@@ -78,7 +78,7 @@
 	</script>
 </head>
 <body>
-	<h3>user1 목록</h3>
+	<h3>user2 목록</h3>
 
 	<a href="/ch06/3.AJAXTest.jsp">처음으로</a>
 	<a href="./register.jsp">등록하기</a>
@@ -86,8 +86,8 @@
 		<tr>
 			<th>아이디</th>
 			<th>이름</th>
-			<th>휴대폰</th>
-			<th>나이</th>
+			<th>생년월일</th>
+			<th>주소</th>
 			<th>관리</th>
 		</tr>
 	</table>
