@@ -22,4 +22,4 @@
 		</div>
 	</section>
 </main>
-<<%@ include file="./_footer.jsp" %>
+<%@ include file="./_footer.jsp" %>
