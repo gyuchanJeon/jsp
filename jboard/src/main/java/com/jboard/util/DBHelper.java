@@ -17,27 +17,43 @@ public class DBHelper {
 	protected PreparedStatement psmt = null;
 	protected Statement stmt = null;
 	protected ResultSet rs = null;
-	
+
 	protected Connection getConnection() throws NamingException, SQLException {
-		
+
 		Context ctx = (Context) new InitialContext().lookup("java:comp/env");
 		DataSource ds = (DataSource) ctx.lookup("jdbc/jboard");
 		return ds.getConnection();
 	}
-	
-	protected void closeAll() throws SQLException{
-		
+
+	protected void closeAll() {
+
 		if (rs != null) {
-			rs.close();
+			try {
+				rs.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		if (stmt != null) {
-			stmt.close();
+			try {
+				stmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		if (psmt != null) {
-			psmt.close();
+			try {
+				psmt.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 		if (conn != null) {
-			conn.close();
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 }
